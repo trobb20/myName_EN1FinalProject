@@ -2,7 +2,12 @@
 <head>
 <script src="airtable_script.js"></script>
 </head>
-<body onload="setup();" style="background-color: none">
+<body style="background-color: none">
+    <script>
+    window.addEventListener('load', function () {
+        setup();
+    })
+    </script>
 
     <p>Robot Control</p>
 	<button airtable_value='action'>Slower</button>
