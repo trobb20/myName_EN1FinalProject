@@ -1,7 +1,9 @@
 
-//Airtable_script.js
-//Edited 11-4-20 
-//Ethan Danahy and Teddy Robbins
+/*
+Airtable_script.js
+Edited 11-4-20 
+Ethan Danahy and Teddy Robbins
+*/
 
 //Wrapper functions for updating airtable based on button, slider, and text input
 function button_function(elem) {
