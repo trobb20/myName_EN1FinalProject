@@ -1,4 +1,9 @@
-// ALL OF THIS WOULD BE "hidden" IN A SCRIPT SRC FILE
+
+//Airtable_script.js
+//Edited 11-4-20 
+//Ethan Danahy and Teddy Robbins
+
+//Wrapper functions for updating airtable based on button, slider, and text input
 function button_function(elem) {
     alert('Set airtable attribute "' + elem.getAttribute('airtable_value') + '" to be "' + elem.innerHTML + '"');
 }
@@ -8,7 +13,9 @@ function range_function(elem) {
 function text_function(elem){
     alert('Set airtable attribute "' + elem.getAttribute('airtable_value') + '" to be "' + elem.value + '"');
 }
-//test
+
+
+//Setup for assigning elements to wrapper functions
 function setup() {
     d = document.querySelectorAll("button");
     for (i=0; i<d.length; i++) {

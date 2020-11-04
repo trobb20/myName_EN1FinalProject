@@ -1,27 +1,73 @@
+<!-- 
+Template for an EN1 Final Project Page
+Edited 11-4-20
+Ethan Danahy and Teddy Robbins 
+-->
+
 <html>
 <head>
-<script src="airtable_script.js"></script>
+<!-- This imports the magic script -- don't touch! -->
+<script src="airtable_script.js"></script> 
+<!-- --------------------------------------------- -->
 </head>
 <body style="background-color: none">
+
+    <!-- This begins to listen for your command inputs -- don't touch! -->
     <script>
     window.addEventListener('load', function () {
         setup();
     })
     </script>
+    <!-- ------------------------------------------------------------- -->
 
+
+    <!-- Edit your page template below: -->
+
+    <!-- Types of input: Button -->
+    <div class='robotControl'>
     <p>Robot Control</p>
 	<button airtable_value='action'>Slower</button>
 	<button airtable_value='action'>Faster</button>
 	<button airtable_value='action'>Stop</button>
+    </div>
 
+    <!-- Types of input: Slider -->
+    <div class='motorControl'>
     <p>Motor Control w/ Sliders</p>
 	<button airtable_value='motor1'>Forward</button>
 	<button airtable_value='motor1'>Backward</button>
 	<button airtable_value='motor1'>Stop</button>
     <input type="range" min="1" max="100" value="50" airtable_value='motor1_speed'>
+    <div>
 
-    <p>Text Input</p>
+    <!-- Types of input: Text -->
+    <div class='textInput'>
+    <p>Text Input (will update automatically)</p>
     <input type='text' airtable_value='text_input'>
+    </div>
 
 </body>
+<style>
+    .robotControl{
+        background-color:#ffcccc;
+        border:solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+    }
+    .motorControl{
+        background-color:#ccccff;
+        border:solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+    }
+    .textInput{
+        background-color:#ccffcc;
+        border:solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+    }
+</style>
 </html>
