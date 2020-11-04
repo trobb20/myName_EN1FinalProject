@@ -1,27 +1,6 @@
 <html>
 <head>
-
-    <script lang="javascript">
-	    // ALL OF THIS WOULD BE "hidden" IN A SCRIPT SRC FILE
-        function button_function(elem) {
-            alert('Set airtable attribute "' + elem.getAttribute('airtable_value') + '" to be "' + elem.innerHTML + '"');
-        }
-        function range_function(elem) {
-            alert('Set airtable attribute "' + elem.getAttribute('airtable_value') + '" to be "' + elem.value + '"');
-        }
-//test
-        function setup() {
-            d = document.querySelectorAll("button");
-            for (i=0; i<d.length; i++) {
-                d[i].onclick = function () { button_function(this); }
-            }
-            d = document.querySelectorAll("input[type=range]");
-            for (i=0; i<d.length; i++) {
-                d[i].onclick = function () { range_function(this); }
-            }
-        }
-    </script>
-
+<script src="myscripts.js"></script>
 </head>
 <body onload="setup();" style="background-color: none">
 
@@ -30,23 +9,14 @@
 	<button airtable_value='action'>Faster</button>
 	<button airtable_value='action'>Stop</button>
 
-    <p>Motor 1</p>
+    <p>Motor Control w/ Sliders</p>
 	<button airtable_value='motor1'>Forward</button>
 	<button airtable_value='motor1'>Backward</button>
 	<button airtable_value='motor1'>Stop</button>
     <input type="range" min="1" max="100" value="50" airtable_value='motor1_speed'>
 
-    <p>Motor 2</p>
-	<button airtable_value='motor2'>Forward</button>
-	<button airtable_value='motor2'>Backward</button>
-	<button airtable_value='motor2'>Stop</button>
-    <input type="range" min="1" max="100" value="50" airtable_value='motor2_speed'>
-
-    <p>Motor 3</p>
-	<button airtable_value='motor3'>Forward</button>
-	<button airtable_value='motor3'>Backward</button>
-	<button airtable_value='motor3'>Stop</button>
-    <input type="range" min="1" max="100" value="50" airtable_value='motor3_speed'>
+    <p>Text Input</p>
+    <input type='text' airtable_value='text_input'>
 
 </body>
 </html>
