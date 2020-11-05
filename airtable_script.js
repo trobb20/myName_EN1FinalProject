@@ -5,6 +5,10 @@ Edited 11-4-20
 Ethan Danahy and Teddy Robbins
 */
 
+window.addEventListener('load', function () {
+        setup();
+});
+
 //Wrapper functions for updating airtable based on button, slider, and text input
 function button_function(elem) {
     alert('Set airtable attribute "' + elem.getAttribute('airtable_value') + '" to be "' + elem.innerHTML + '"');
