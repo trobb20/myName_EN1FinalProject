@@ -11,29 +11,38 @@ Ethan Danahy and Teddy Robbins
 <!-- --------------------------------------------- -->
 </head>
 <body style="background-color: none">
-
-    <!-- This begins to listen for your command inputs -- don't touch! -->
-    <!-- <script>
-    window.addEventListener('load', function () {
-        setup();
-    })
-    </script> -->
-    <!-- ------------------------------------------------------------- -->
-
-
     <!-- Edit your page template below: -->
-
+    <h1>EN1 Final Project Template!</h1>
+    <p><b>My name is:</b> enter name here </p> <!-- change your name here! -->
+    <br>
+    <!-- INPUTS: -->
     <!-- Types of input: Button -->
-    <div class='robotControl'>
-    <p>Robot Control</p>
-	<button airtable_value='action'>Slower</button>
+
+<!--     
+    Add buttons using the button tag. The name in airtable_value
+    will be set to whatever is in between the button tag. 
+    In the case of the first button below, 'action' will be set
+    to 'Slower' 
+-->
+
+    <div class='buttonBlock'>
+    <p>Robot Control Buttons</p> <!-- Name your button(s) in this paragraph tag -->
+	<button airtable_value='action'>Slower</button> 
 	<button airtable_value='action'>Faster</button>
 	<button airtable_value='action'>Stop</button>
     </div>
 
     <!-- Types of input: Slider -->
-    <div class='motorControl'>
-    <p>Motor Control w/ Sliders</p>
+
+<!--     
+    Add sliders & buttons together by using the <input type='range'>
+    tag and the button tag. The slider can have a min/max value
+    and a starting value called 'value'. The name in airtable_value
+    will be set to the value of the slider whenever it is dragged.
+-->
+
+    <div class='sliderBlock'>
+    <p>Motor Control with Slider</p> <!-- Name your slider(s) in this paragraph tag -->
 	<button airtable_value='motor1'>Forward</button>
 	<button airtable_value='motor1'>Backward</button>
 	<button airtable_value='motor1'>Stop</button>
@@ -41,33 +50,70 @@ Ethan Danahy and Teddy Robbins
     </div>
 
     <!-- Types of input: Text -->
-    <div class='textInput'>
-    <p>Text Input (will update automatically)</p>
-    <input type='text' airtable_value='text_input'>
+
+<!--     
+    Add text input using the <form> tag with an <input type='text'>
+    tag inside. The form requires a submit button, which can be
+    copied and pasted below the text input tag. Make sure to use
+    1 form per 1 text input! The name in airtable_value will be
+    set to whatever the user enters into the text input. 
+-->
+
+    <div class='textBlock'>
+    <p>Text Input</p> <!-- Name your text input in this paragraph tag -->
+    <form>
+        <input type='text' airtable_value='text_input'>
+        <input type='button' value='Submit'>
+    </form>
     </div>
+
+<!-- That's it for the HTML side! -->
 
 </body>
 <style>
-    .robotControl{
-        background-color:#ffcccc;
+
+    /* This is where you can make changes to the
+    appearance of your different blocks. 
+
+    For info on CSS, copy and paste the link
+    below into your browser!
+
+    https://www.w3schools.com/css/default.asp
+
+    */
+
+    .buttonBlock{
+        /*Give your button block some style!
+        Add color, change the border, and
+        change the size using CSS styling*/
+        background-color:lightblue; 
         border:solid;
-        padding-top: 10px;
+        padding-top: 10px; 
         padding-bottom: 10px;
         padding-left: 40px;
+        width:30%;
     }
-    .motorControl{
-        background-color:#ccccff;
+    .sliderBlock{
+        /*Give your slider block some style!
+        Add color, change the border, and
+        change the size using CSS styling*/
+        background-color:orange;
         border:solid;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 40px;
+        width:30%;
     }
-    .textInput{
-        background-color:#ccffcc;
+    .textBlock{
+        /*Give your text block some style!
+        Add color, change the border, and
+        change the size using CSS styling*/
+        background-color:lightgreen;
         border:solid;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 40px;
+        width:30%;
     }
 </style>
 </html>
