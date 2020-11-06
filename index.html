@@ -1,16 +1,27 @@
 <!-- 
 Template for an EN1 Final Project Page
 Edited 11-4-20
-Ethan Danahy and Teddy Robbins 
+Ethan Danahy, Teddy Robbins, Jeremy Jung
 -->
 
 <html>
 <head>
 <!-- This imports the magic script -- don't touch! -->
+    <script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js"
+    type="text/javascript"></script>
+    
+<!-- This creates the Airtable button -->
+<div id="servicedock" style="float:right;">
+    <!-- IMPORTANT!!! REPLACE "apikey", "baseid", AND "tablename" attributes with your own information -->
+    <service-airtable id="service_airtable" apikey = "YOURAPIKEY" baseid = "YOURBASEID" tablename = "YOURTABLENAME">
+    </service-airtable>
+</div>
+
 <script src="airtable_script.js"></script> 
 <!-- --------------------------------------------- -->
 </head>
 <body style="background-color: none">
+
     <!-- Edit your page template below: -->
     <h1>EN1 Final Project Template!</h1>
     <p><b>My name is:</b> enter name here </p> <!-- change your name here! -->
